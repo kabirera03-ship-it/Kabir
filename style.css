@@ -1,0 +1,165 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:radial-gradient(circle at top,#10133d,#000);
+  color:#fff;
+  text-align:center;
+  overflow-x:hidden;
+}
+
+/* SCROLL PROGRESS */
+#progress{
+  position:fixed;
+  top:0;
+  left:0;
+  height:4px;
+  width:0%;
+  background:linear-gradient(90deg,#6c63ff,#ff6aff);
+  z-index:9999;
+}
+
+/* LIVE TIME */
+#liveTime{
+  position:fixed;
+  top:20px;
+  left:20px;
+  padding:10px 18px;
+  border-radius:25px;
+  background:linear-gradient(135deg,#6c63ff,#ff6aff);
+  box-shadow:0 0 20px #6c63ff,0 0 60px #ff6aff;
+  font-weight:600;
+  z-index:999;
+}
+
+/* SECTIONS */
+.section{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  padding:60px 20px;
+}
+
+/* HERO */
+.hero .subtitle{
+  opacity:.85;
+  margin-top:8px;
+}
+
+.badges span{
+  display:inline-block;
+  margin:6px;
+  padding:8px 16px;
+  border-radius:20px;
+  background:rgba(255,255,255,.1);
+}
+
+/* PROFILE RINGS */
+.ring-container{
+  position:relative;
+  width:260px;
+  height:260px;
+  margin-bottom:25px;
+}
+
+.ring-container img{
+  width:150px;
+  height:150px;
+  border-radius:50%;
+  position:absolute;
+  inset:0;
+  margin:auto;
+  box-shadow:
+    0 0 80px #6c63ff,
+    0 0 160px #ff6aff,
+    0 0 260px rgba(108,99,255,.9);
+  z-index:3;
+}
+
+.ring{
+  position:absolute;
+  border-radius:50%;
+  border:3px solid transparent;
+  animation:spin linear infinite;
+}
+
+.r1{width:200px;height:200px;border-top:3px solid #6c63ff;animation-duration:8s}
+.r2{width:230px;height:230px;border-right:3px solid #ff6aff;animation-duration:10s}
+.r3{width:260px;height:260px;border-left:3px solid #00f8ff;animation-duration:12s}
+
+@keyframes spin{
+  to{transform:rotate(360deg)}
+}
+
+/* GLASS */
+.glass{
+  background:rgba(255,255,255,.08);
+  backdrop-filter:blur(16px);
+  border-radius:20px;
+  padding:30px;
+  max-width:720px;
+}
+
+/* SKILLS */
+.skill-grid span{
+  display:inline-block;
+  margin:8px;
+  padding:12px 20px;
+  border-radius:22px;
+  background:rgba(255,255,255,.1);
+}
+
+/* BUTTONS */
+.buttons a,
+button{
+  margin:10px;
+  padding:14px 30px;
+  border-radius:30px;
+  border:none;
+  background:linear-gradient(135deg,#6c63ff,#ff6aff);
+  color:#fff;
+  cursor:pointer;
+  text-decoration:none;
+}
+
+.outline{
+  background:none;
+  border:2px solid #6c63ff;
+}
+
+/* CHAT */
+#chatLog{
+  width:100%;
+  max-width:600px;
+  height:180px;
+  overflow-y:auto;
+  margin-bottom:12px;
+  text-align:left;
+}
+
+/* REVEAL */
+.reveal{
+  opacity:0;
+  transform:translateY(40px);
+  transition:.8s;
+}
+
+.reveal.active{
+  opacity:1;
+  transform:none;
+}
+
+footer{
+  padding:30px;
+  opacity:.7;
+}
